@@ -41,22 +41,26 @@ const Currencies = () => {
 
 return (
         <div className='currencies-container'>
+            <h2>Currencies</h2>
             <div className='curr-header'>
                 <p>Coin</p>
-                <p>Status</p>
                 <p>Price</p>
+                <p>Graph</p>
             </div>
         {
             coins.map((coin, index) => (
                 <div className='curr-container' onClick={() => navigate('/detail/' + coin.symbol)} key={index}>
-                    <div className='curr-info'>
+                    <div className='curr-name'>
                         <img src={coin.logo} alt="" />
                         <p className='coin-name'>{coin.coin}</p>
+                    </div>
+                    <div className='curr-info'>
                         <p className='coin-status'>
                         {isDown ? <IoMdArrowDropdown/> : <IoMdArrowDropup/>}
                         </p>
-                    </div>
                     <p className='curr-price'>{coin.price}</p>
+                    </div>
+                    <img className='curr-graph' src={coin.graph} alt={coin.coin} />
                 </div>
             ))
         }

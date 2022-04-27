@@ -14,7 +14,7 @@ const Detail = () => {
     },[])
     
   return (
-    <div>
+    <div className='detail-container'>
         {
             coins.map((coin, index) => {
                 return (
@@ -26,11 +26,14 @@ const Detail = () => {
                                 <p className='detail-symbol'>{coin.symbol}</p>
                             </div>
                                 <div className='detail-price'>
-                                    <p>{coin.coin} Price ({coin.symbol})</p>
+                                    <p className='name'>{coin.coin} Price ({coin.symbol})</p>
+                                    <p className='price'>
                                     {coin.price}
+                                    </p>
                                 </div>
                         </div>
                         <div className='detail-graph'>
+                            <p>Overview</p>
                             <a href={coin.href} target="_blank" >
                             <img src={coin.graph} alt={coin.href} />
                             </a>
@@ -40,7 +43,6 @@ const Detail = () => {
                 )
             })
         }
-        <h2>Crypto News</h2>
         <NewsApi/>
     </div>
   )
