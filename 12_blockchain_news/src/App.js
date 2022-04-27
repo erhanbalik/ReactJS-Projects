@@ -1,14 +1,18 @@
-import NewsApi from "./APIs/NewsApi";
-import CroPrices from "./Components/CroPrices";
 
-// TODO: price apisinden aldiklarini yukarda kayan bir bolum olustur akis yap
-// TODO:  Ana ekran 2 grid olacak solda haberler sagda fiyatlar
-// TODO: Fiyata tiklayinca chartina gidecek 
+import Header from "./Components/Header";
+import {BrowserRouter} from 'react-router-dom';
+import Pages from "./Pages/Pages";
+import Footer from "./Components/Footer";
+// TODO: DALGICa sor; arrayin icindeki arrayi acma
+// TODO: DALGICa sor; router yaparken tiklanan coinin ismine gore bilgi getirme
 function App() {
   return (
     <div className="App">
-        <CroPrices/>
-        <NewsApi />
+        <BrowserRouter>
+            <Header/>
+            <Pages/>
+            <Footer/>
+        </BrowserRouter>
     </div>
   );
 }

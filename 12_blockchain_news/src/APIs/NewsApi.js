@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 import React from 'react'
+import { Link } from "react-router-dom";
 
 const NewsApi = () => {
     const [news, setNews] = useState([]);
@@ -37,11 +38,21 @@ const NewsApi = () => {
         },[])
 
   return (
-    <div>
+    <div className="news">
+        <h2>Crypto News</h2>
         {
-            news.map((data) => (
-                <div className="news-container">
-                    {data.title}
+            news.map((data, index) => (
+                <div className="news-container" key={index}>
+                    <p className="newsTitle">{data.title}</p>
+                    <div className="newsDetail">
+                        <p className="newsDesc">{data.description}</p>
+                        <img src="https://analyticsinsight.b-cdn.net/wp-content/uploads/2022/02/CryptoCurrency-News.jpg" alt="" />
+                    </div>
+                        <div>
+                            <li className="newsOrigin">
+                                <a href={data.url} target='_blank'>See website</a>
+                            </li>
+                        </div>
                 </div>
             ))
         }
