@@ -10,9 +10,6 @@ const Header = () => {
         </Link>
       <div className='header-menu'>
         <li>
-          <Link to='/favorite'>Favorite</Link>
-        </li>
-        <li>
           <Link to='/currencies'>Market</Link>
         </li>
       </div>

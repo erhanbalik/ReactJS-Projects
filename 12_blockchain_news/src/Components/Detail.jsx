@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import NewsApi from '../APIs/NewsApi';
-
+import { motion } from 'framer-motion';
 const Detail = () => {
     const [coins, setCoins] = useState([]);
 
@@ -14,7 +14,12 @@ const Detail = () => {
     },[])
     
   return (
-    <div className='detail-container'>
+    <motion.div className='detail-container'
+    initial={{x: 1000, y: 0, opacity: 0}}
+    animate={{x: 0, y: 0, opacity: 1}}
+    exit={{opacity:0}}
+    transition={{delay:.5}}
+    >
         {
             coins.map((coin, index) => {
                 return (
@@ -44,7 +49,7 @@ const Detail = () => {
             })
         }
         <NewsApi/>
-    </div>
+    </motion.div>
   )
 }
 

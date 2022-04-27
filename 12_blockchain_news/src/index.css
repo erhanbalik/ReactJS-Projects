@@ -294,13 +294,17 @@ img{
 .footer {
   width: 100%;
   height: 20vh;
-  color:whitesmoke;
-  background-color: #202020;
-  display: flex;
+  background-color: var(--newsColor);
   margin-left: -10%;
+  display: flex;
+  flex-direction: column-reverse;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 20px;
+}
+
+.compName {
+  color: whitesmoke;
 }
 
 /* END FOOTER */

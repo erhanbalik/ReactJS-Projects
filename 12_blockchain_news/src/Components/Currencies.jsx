@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import {IoMdArrowDropup, IoMdArrowDropdown} from 'react-icons/io'
 import {useNavigate, useParams } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
 const Currencies = () => {
 
     const [coins, setCoins] = useState([]);
@@ -40,7 +40,12 @@ const Currencies = () => {
     const navigate = useNavigate();
 
 return (
-        <div className='currencies-container'>
+        <motion.div className='currencies-container'
+        initial={{opacity: 0}}
+        animate={{opacity:1}}
+        exit={{opacity:0}}
+        transition={{delay:.5}}
+        >
             <h2>Currencies</h2>
             <div className='curr-header'>
                 <p>Coin</p>
@@ -64,7 +69,7 @@ return (
                 </div>
             ))
         }
-        </div>
+        </motion.div>
 )
 }
 
