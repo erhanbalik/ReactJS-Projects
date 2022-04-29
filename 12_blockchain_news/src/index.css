@@ -7,12 +7,12 @@ list-style: none;
 text-decoration: none;
 }
 :root {
-  --backgroundColor: #287829d0;
+  --backgroundColor: #287378d0;
   --currenciesBG: #1F4068;
   --linkColor: #1e1e1ef8;
   --newsColor:#284b63;
   --newsTextColor: #d9d9d9;
-  --priceColor: #1d1d1d;
+  --priceColor: #920a0a;
 
 }
 body {
@@ -24,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(105deg,var(--backgroundColor), #095c24);
+  background-image: linear-gradient(160deg,var(--backgroundColor), #112b68);
 }
 a {
   color: var(--linkColor);
@@ -89,11 +89,11 @@ display: flex;
 }
 
 .coin-info, .coin-name {
-  color: var(--priceColor);
+  color: rgb(30, 30, 30);
 }
 
 .coin-status, .coin-price {
-  color:rgb(196, 38, 38);
+  color:var(--priceColor);
 }
 
 .singleCoin-container {
@@ -141,7 +141,7 @@ display: flex;
   border-bottom: 1px solid rgb(74, 74, 74);
 }
 .news-container {
-  height: 12vh;
+  height: 100%;
   margin-top: 10px;
   border-bottom: 1px solid rgb(86, 86, 86);
   display: flex;
@@ -157,7 +157,7 @@ display: flex;
   margin: 20px 0;
 }
 .newsOrigin a{
- color:rgb(7, 88, 97);
+ color:rgb(239, 201, 33);
  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  font-weight: 600;
 }
@@ -224,7 +224,7 @@ display: flex;
 }
 .curr-price {
   width: 50px;
-  color: rgb(196, 38, 38);
+  color: var(--priceColor);
 }
 .curr-graph {
   background-color: rgba(0, 0, 0, 0.552);
@@ -259,7 +259,7 @@ img{
   font-size: 14px;
   text-align: center;
   border-radius: 3px;
-  background-color: rgba(154, 154, 154, 0.817);
+  background-color: rgba(176, 171, 171, 0.37);
 }
 .name {
   font-size: 14px;
